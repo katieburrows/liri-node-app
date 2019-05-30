@@ -1,4 +1,4 @@
-console.log("keys have loaded");
+// console.log("keys have loaded");
 
 exports.twitter = {
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
