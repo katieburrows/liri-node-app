@@ -1,4 +1,4 @@
-console.log('this is loaded');
+console.log("keys have loaded");
 
 exports.twitter = {
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
@@ -8,7 +8,6 @@ exports.twitter = {
 };
 
 exports.spotify = {
-  id: process.env.b9e2b867c94d4d09bcf176731c97f6a7,
-  secret: process.env.b50beae6d1c041899bc13ef850de2239
+  id: process.env.SPOTIFY_ID,
+  secret: process.env.SPOTIFY_SECRET
 };
-
