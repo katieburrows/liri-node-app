@@ -70,7 +70,7 @@ var doWhatItSays = function() {
         var textArg = dataArray.pop();
         var funcArg = dataArray.pop();
 
-        switch(funcArg){
+        switch(funcArg) {
             case "my-tweets":
                 myTweets(textArg);
                 break;
@@ -83,35 +83,23 @@ var doWhatItSays = function() {
             default: 
                 return console.log(`Error!`);
         }
-
-        // console.log(`Function to execute: ${funcArg}`);
-        // console.log(`Text to search: ${textArg}`);
     })
 }
 
 
-
-if (commandArgs === "my-tweets"){
-    myTweets();
-} 
-else if (commandArgs === "spotify-this-song") {
-    spotifyThisSong();
-} 
-else if (commandArgs === "movie-this"){
-    movieThis();
-} 
-else if (commandArgs === "do-what-it-says"){
-    doWhatItSays();
+switch(commandArgs) {
+    case "my-tweets":
+        myTweets();
+        break;
+    case "spotify-this-song":
+        spotifyThisSong();
+        break;
+    case "movie-this":
+        movieThis();
+        break;
+    case "do-what-it-says":
+        doWhatItSays();
+        break;
+    default:
+        return console.log(`That is not a valid entry. Please enter: "my-tweets", "spotify-this-song", "movie-this", or "do-what-it-says"`);
 }
-else {
-    console.log(`That is not a valid entry. Please enter: "my-tweets", "spotify-this-song", "movie-this", or "do-what-it-says"`);
-}
-
-
-
-
-
-
-
-
-
