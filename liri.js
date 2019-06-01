@@ -58,9 +58,26 @@ var doWhatItSays = function() {
         if (error){
             return console.log(error);
         }
-        var dataArray = data.split(", ");
+        var dataArray = data.split(",");
+        var textArg = dataArray.pop();
+        var funcArg = dataArray.pop();
 
-        console.log(dataArray);
+        switch(funcArg){
+            case "my-tweets":
+                myTweets(textArg);
+                break;
+            case "spotify-this-song":
+                spotifyThisSong(textArg);
+                break;
+            case "movie-this":
+                movieThis(textArg);
+                break;
+            default: 
+                return console.log(`Error!`);
+        }
+
+        // console.log(`Function to execute: ${funcArg}`);
+        // console.log(`Text to search: ${textArg}`);
     })
 }
 
@@ -81,3 +98,12 @@ else if (commandArgs === "do-what-it-says"){
 else {
     console.log(`That is not a valid entry. Please enter: "my-tweets", "spotify-this-song", "movie-this", or "do-what-it-says"`);
 }
+
+
+
+
+
+
+
+
+
