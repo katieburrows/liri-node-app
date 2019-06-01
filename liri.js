@@ -54,7 +54,12 @@ var movieThis = function() {
      
 // * Feel free to change the text in that document to test out the feature for other commands.
 var doWhatItSays = function() {
-    console.log(`do what it says`);
+    fs.readFile("random.txt", "utf8", function(error, data){
+        if (error){
+            return console.log(error);
+        }
+        console.log(data);
+    })
 }
 
 
