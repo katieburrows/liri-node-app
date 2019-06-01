@@ -58,7 +58,9 @@ var doWhatItSays = function() {
         if (error){
             return console.log(error);
         }
-        console.log(data);
+        var dataArray = data.split(", ");
+
+        console.log(dataArray);
     })
 }
 
