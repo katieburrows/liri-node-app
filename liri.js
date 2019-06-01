@@ -29,22 +29,31 @@ var spotifyThisSong = function() {
     console.log(`song`);
 }
 
-var movieThis = function() {
+var movieThis = function(movie) {
+
     var movieTitle = process.argv.slice(3).join("+");
 
-    if (!movieTitle){
+    if (movie){
+        movieTitle = movie.split(" ");
+        movieTitle = movieTitle.splice(0, 1);
+        console.log(movieTitle);
+    }
+    if (!movieTitle && !movie){
         movieTitle = "Mr. Nobody";
     }
 
     var queryUrl = "https://www.omdbapi.com/?t=" + movieTitle + "&apikey=trilogy";
 
-    axios.get(queryUrl).then(
-        function(response) {
-            var baseline = response.data;
-            console.log("\n********** Movie Data **********\n");
-            console.log(`     Movie title: ${baseline.Title}\n     Year released: ${baseline.Year}\n     IMDB rating: ${baseline.Ratings[0].Value}\n     Rotten Tomatoes rating: ${baseline.Ratings[1].Value}\n     Country where movie was produced: ${baseline.Country}\n     Language: ${baseline.Language}\n     Plot: ${baseline.Plot}\n     Actors: ${baseline.Actors}`); 
-            console.log("\n********************************\n");
-    })
+    // console.log(queryUrl);
+
+   
+    // axios.get(queryUrl).then(
+    //     function(response) {
+    //         var baseline = response.data;
+    //         console.log("\n********** Movie Data **********\n");
+    //         console.log(`     Movie title: ${baseline.Title}\n     Year released: ${baseline.Year}\n     IMDB rating: ${baseline.Ratings[0].Value}\n     Rotten Tomatoes rating: ${baseline.Ratings[1].Value}\n     Country where movie was produced: ${baseline.Country}\n     Language: ${baseline.Language}\n     Plot: ${baseline.Plot}\n     Actors: ${baseline.Actors}`); 
+    //         console.log("\n********************************\n");
+    // })
 
 }
 
