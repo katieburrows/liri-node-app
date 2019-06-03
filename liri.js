@@ -26,7 +26,12 @@ var myTweets = function() {
 
 // * If no song is provided then your program will default to "The Sign" by Ace of Base.
 var spotifyThisSong = function() {
-    console.log(`song`);
+    var song = process.argv.slice(3).join("+");
+    if (!song) {
+        song = "The Sign";
+    }
+
+    console.log(song);
 }
 
 var movieThis = function(movie) {
