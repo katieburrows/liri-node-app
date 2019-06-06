@@ -18,23 +18,23 @@ var myTweets = function() {
 var spotifyThisSong = function() {
     var song = process.argv.slice(3).join(" ");
     if (!song) {
-        song = "The Sign";
+        song = "Spice Up Your Life";
     }
 
-    console.log(`song: ${song}`);
     spotify.search({ type: "track", query: song, limit: 1 }, function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);
         }
        
- 
+        var baseDot = data.tracks.items[0];
         
-        var artist = data.tracks.items[0].album.artists[0].name;
-    //   var songName =
+        var artist = baseDot.album.artists[0].name;
+        var songName = baseDot.name;
     //   var album = 
     //   var previewLink = 
       
 console.log(`artist: ${artist}`);
+console.log(`song name: ${songName}`);
 
       });
 }
@@ -60,85 +60,7 @@ console.log(`artist: ${artist}`);
 //               }
 //             ],
 //             "available_markets": [
-//               "AD",
-//               "AE",
-//               "AR",
-//               "AT",
-//               "AU",
-//               "BE",
-//               "BG",
-//               "BH",
-//               "BO",
-//               "BR",
-//               "CA",
-//               "CH",
-//               "CL",
-//               "CO",
-//               "CR",
-//               "CY",
-//               "CZ",
-//               "DE",
-//               "DK",
-//               "DO",
-//               "DZ",
-//               "EC",
-//               "EE",
-//               "EG",
-//               "ES",
-//               "FI",
-//               "FR",
-//               "GB",
-//               "GR",
-//               "GT",
-//               "HK",
-//               "HN",
-//               "HU",
-//               "ID",
-//               "IE",
-//               "IL",
-//               "IN",
-//               "IS",
-//               "IT",
-//               "JO",
-//               "JP",
-//               "KW",
-//               "LB",
-//               "LI",
-//               "LT",
-//               "LU",
-//               "LV",
-//               "MA",
-//               "MC",
-//               "MT",
-//               "MX",
-//               "MY",
-//               "NI",
-//               "NL",
-//               "NO",
-//               "NZ",
-//               "OM",
-//               "PA",
-//               "PE",
-//               "PH",
-//               "PL",
-//               "PS",
-//               "PT",
-//               "PY",
-//               "QA",
-//               "RO",
-//               "SA",
-//               "SE",
-//               "SG",
-//               "SK",
-//               "SV",
-//               "TH",
-//               "TN",
-//               "TR",
-//               "TW",
-//               "US",
-//               "UY",
-//               "VN",
-//               "ZA"
+
 //             ],
 //             "external_urls": {
 //               "spotify": "https://open.spotify.com/album/17knWaxhmQjegn5eJgGVyL"
