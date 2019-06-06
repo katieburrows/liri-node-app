@@ -38,7 +38,6 @@ var spotifyThisSong = function() {
         console.log(`Artist: ${artist}`);
         console.log(`\nSong name: ${songName}`);
         console.log(`\nAlbum: ${album}`);
-        console.log(`\nPreview link: ${previewLink}`);
         console.log(`\nLink to play full album: ${fullSongLink}`);
         console.log(`\n******************************\n\n`)
       });
