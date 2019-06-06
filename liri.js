@@ -5,13 +5,20 @@ var keys = require("./keys");
 var axios = require("axios");
 var fs = require("fs");
 var spotify = new Spotify(keys.spotify);
-var twitter = new Twitter(keys.twitter);
+var client = new Twitter(keys.twitter);
 
 var commandArgs = process.argv[2];
 
 // * This will show your last 20 tweets and when they were created at in your terminal/bash window.
 var myTweets = function() {
-    console.log(`tweet`);
+    var params = {screen_name: "kaburrows4"};
+    client.get('statuses/user_timeline', params, function(error, tweets, response) {
+    if (!error) {
+
+    console.log(`tweet: ${tweets[0].text}`);
+    console.log(`tweet created: ${tweets[0].created_at}`);
+  }
+});
 }
 
 
