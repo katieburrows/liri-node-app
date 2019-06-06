@@ -15,12 +15,16 @@ var myTweets = function() {
 }
 
 
-var spotifyThisSong = function() {
+var spotifyThisSong = function(txtFileSong) {
     var song = process.argv.slice(3).join(" ");
-    if (!song) {
-        song = "Spice Up Your Life";
+    
+    if (txtFileSong) {
+        song = txtFileSong;
     }
 
+    if (!song){
+        song = "Spice Up Your Life";
+    }
     spotify.search({ type: "track", query: song, limit: 1 }, function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);
