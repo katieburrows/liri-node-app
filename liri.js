@@ -15,8 +15,15 @@ var myTweets = function() {
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if (!error) {
 
-    console.log(`tweet: ${tweets[0].text}`);
-    console.log(`tweet created: ${tweets[0].created_at}`);
+    console.log(`\n\n***Tweets***`);
+    for (var i = 0; i < 20; i++){
+        console.log(`\n**********Chirp Chirp**********\n`);
+        console.log(`${tweets[i].text}`);
+        console.log(`   Tweet created on: ${tweets[i].created_at}\n`);
+        // console.log(`\n*******************************`);
+
+    }
+    console.log(`\n\n\****************************\n\n\n`);
   }
 });
 }
