@@ -27,16 +27,16 @@ var spotifyThisSong = function() {
         }
        
         var baseDot = data.tracks.items[0];
-        
+
         var artist = baseDot.album.artists[0].name;
         var songName = baseDot.name;
         var album = baseDot.album.name; 
-    //   var previewLink = 
+        var previewLink = baseDot.preview_url;
       
-console.log(`artist: ${artist}`);
-console.log(`song name: ${songName}`);
-console.log(`album: ${album}`);
-
+        console.log(`artist: ${artist}`);
+        console.log(`song name: ${songName}`);
+        console.log(`album: ${album}`);
+        console.log(`preview link: ${previewLink}`);
       });
 }
 
