@@ -34,11 +34,13 @@ var spotifyThisSong = function() {
         var previewLink = baseDot.preview_url;
         var fullSongLink = baseDot.external_urls.spotify;
       
-        console.log(`artist: ${artist}`);
-        console.log(`song name: ${songName}`);
-        console.log(`album: ${album}`);
-        console.log(`preview link: ${previewLink}`);
-        console.log(`link to play full album: ${fullSongLink}`);
+        console.log(`\n\n***********Results***********\n`);
+        console.log(`Artist: ${artist}`);
+        console.log(`\nSong name: ${songName}`);
+        console.log(`\nAlbum: ${album}`);
+        console.log(`\nPreview link: ${previewLink}`);
+        console.log(`\nLink to play full album: ${fullSongLink}`);
+        console.log(`\n******************************\n\n`)
       });
 }
 
