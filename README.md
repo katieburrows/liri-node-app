@@ -5,14 +5,26 @@ The user is able to run Liri through the CLI and give the application commands a
 How to search for a movie:
 ![Movie search language](assets/images/movieCommand.png)
 
+The results of that search: 
+![Movie search result](assets/images/movieResult.png)
+
 How to call on Spotify:
 ![Spotify search language](assets/images/spotifyCommand.png)
+
+The results of the Spotify command:
+![Spotify command result](assets/images/spotifyResult.png)
 
 How to access my tweets:
 ![Twitter search language](assets/images/tweetsCommand.png)
 
+The result of that command:
+![Twitter command result](assets/images/tweetsResult.png)
+
 How to command the program to do what it says:
 ![Do what it says language](assets/images/whatItSaysCommand.png)
+
+Current result of Do What it Says:
+![Do What it Says command result](assets/images/whatItSaysCommand.png)
 
 ### Built With:
 * JavaScript
