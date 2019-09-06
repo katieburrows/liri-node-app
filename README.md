@@ -11,7 +11,7 @@ The results of that search:
 How to call on Spotify:
 ![Spotify search language](assets/images/spotifyCommand.png)
 
-The results of the Spotify command:
+You have the option to just command spotify (as in the picture above).  If you do it that way then the hard-coded song will be searched for.  Below the picture shows the results of searching for "That's Amore".  Either method works.
 ![Spotify command result](assets/images/spotifyResult.png)
 
 How to access my tweets:
