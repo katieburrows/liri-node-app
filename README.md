@@ -24,7 +24,7 @@ How to command the program to do what it says:
 ![Do what it says language](assets/images/whatItSaysCommand.png)
 
 Current result of Do What it Says:
-![Do What it Says command result](assets/images/whatItSaysCommand.png)
+![Do What it Says command result](assets/images/doWhatItSaysResult.png)
 
 ### Built With:
 * JavaScript
